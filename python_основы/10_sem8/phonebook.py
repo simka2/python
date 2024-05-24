@@ -64,7 +64,7 @@ def add_contact():
     Вводим контакт и записываем в файл
     """
     contact = create_contact()
-    with open('phonebook.txt', 'a', encoding="UTF-8") as file_a:
+    with open('homework/phonebook.txt', 'a', encoding="UTF-8") as file_a:
         file_a.write(contact)
 
 
@@ -79,7 +79,7 @@ def print_contacts():
     #     print("-" * 50)
     #     print("Вывод контактов завершен")
 
-    with open('phonebook.txt', 'r', encoding="UTF-8") as file_r:
+    with open('homework/phonebook.txt', 'r', encoding="UTF-8") as file_r:
         list_contacts = file_r.read().rstrip().split("\n\n")
 
 
@@ -114,7 +114,7 @@ def search_contact():
     index_var = int(var) - 1
     search = input("Введите данные для поиска: ")
 
-    with open('phonebook.txt', 'r', encoding="UTF-8") as file_r:
+    with open('homework/phonebook.txt', 'r', encoding="UTF-8") as file_r:
         list_contacts = file_r.read().rstrip().split("\n\n")
 
     for contact_str in list_contacts:
@@ -133,7 +133,7 @@ def search_contact():
 #  - вывод на экран
 
 def interface():
-    with open('phonebook.txt', 'a', encoding="UTF-8"):
+    with open('homework/phonebook.txt', 'a', encoding="UTF-8"):
         pass
     command = ''
     while command != '4':
